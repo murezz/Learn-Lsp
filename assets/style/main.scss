@@ -1,0 +1,95 @@
+//font
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+//custom color
+$primaryColor: #42adff;
+$secondaryColor: #002652 ;
+$thirdColor: #42fff3;
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background-color: #fafafa;
+}
+
+#login{
+  background-color: #defcff;
+  padding: 150px;
+  .custom-login{
+    margin-bottom: 50px;
+    margin-right: 50px;
+  }
+  .form-layout{
+    .form-custom{
+      margin-left: 50px;
+      margin-top: 20px;
+      h1{
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: $secondaryColor;
+      }
+      p{
+        margin-bottom: 20px;
+        color: $secondaryColor;
+      }
+      form{
+        .btn-login{
+          background-color: $primaryColor;
+          color: white;
+          margin-top: 5px;
+        }
+        .btn-loginAdmin{
+          border-color: $secondaryColor;
+          color: $secondaryColor;
+          margin-left: 20px;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+  .image{
+    img{
+      margin-left: 100px;
+      width: 250px;
+    }
+  }
+}
+
+
+// login admin
+#loginAdmin{
+  .card{
+    margin-top: 150px;
+    .card-body{
+      .container{
+        .row{
+          .image{
+            img{
+              width: 400px;
+            }
+          }
+          .custom-login{
+            form{
+              h2{
+                font-weight: 600;
+              }
+              button{
+                background-color: $primaryColor;
+                color: white;
+                border-radius: 30px;
+                margin-top: 5px;
+              }
+              a{
+                border-color: $secondaryColor;
+                color: $secondaryColor;
+                margin-left: 20px;
+                border-radius: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+

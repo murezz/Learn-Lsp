@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fafafa;
+}
+
+#login {
+  background-color: #defcff;
+  padding: 150px;
+}
+
+#login .custom-login {
+  margin-bottom: 50px;
+  margin-right: 50px;
+}
+
+#login .form-layout .form-custom {
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+#login .form-layout .form-custom h1 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #002652;
+}
+
+#login .form-layout .form-custom p {
+  margin-bottom: 20px;
+  color: #002652;
+}
+
+#login .form-layout .form-custom form .btn-login {
+  background-color: #42adff;
+  color: white;
+  margin-top: 5px;
+}
+
+#login .form-layout .form-custom form .btn-loginAdmin {
+  border-color: #002652;
+  color: #002652;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+#login .image img {
+  margin-left: 100px;
+  width: 250px;
+}
+
+#loginAdmin .card {
+  margin-top: 150px;
+}
+
+#loginAdmin .card .card-body .container .row .image img {
+  width: 400px;
+}
+
+#loginAdmin .card .card-body .container .row .custom-login form h2 {
+  font-weight: 600;
+}
+
+#loginAdmin .card .card-body .container .row .custom-login form button {
+  background-color: #42adff;
+  color: white;
+  border-radius: 30px;
+  margin-top: 5px;
+}
+
+#loginAdmin .card .card-body .container .row .custom-login form a {
+  border-color: #002652;
+  color: #002652;
+  margin-left: 20px;
+  border-radius: 30px;
+}
+/*# sourceMappingURL=main.css.map */
