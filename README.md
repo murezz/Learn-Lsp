@@ -5,7 +5,7 @@ Clone Projcet
 $ git clone https://github.com/rejakartans/Learn-Lsp.git
 ```
 
-Database
+Running
 ```sh
-
+Localhost/learnLsp/views/siswa/login.php
 ```
