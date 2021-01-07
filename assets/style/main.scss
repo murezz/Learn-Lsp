@@ -5,6 +5,7 @@
 $primaryColor: #42adff;
 $secondaryColor: #002652 ;
 $thirdColor: #42fff3;
+$redColor:#e32309;
 
 body{
   font-family: 'Poppins', sans-serif;
@@ -32,6 +33,9 @@ body{
         color: $secondaryColor;
       }
       form{
+          input{
+            border-style: none;
+          }
         .btn-login{
           background-color: $primaryColor;
           color: white;
@@ -93,3 +97,40 @@ body{
 }
 
 
+#dashboard-siswa{
+  .custom-dashboard{
+    .custom-form{
+      h2{
+        font-weight: 600;
+      }
+      input{
+        border-style: none;
+      }
+      .btn{
+          background-color: $thirdColor;
+          color: white;
+      }      
+    }
+    table{
+      tbody{
+        td{
+          .btn{
+            background-color: $primaryColor;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+// css navbar admin
+@import'navbarAdmin';
+
+// css list siswa dari admin
+@import 'listsiswaAdmin';
+
+// css form tambah siswa
+@import 'tambahSiswa';

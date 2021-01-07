@@ -1,0 +1,40 @@
+#dashboard-admin{
+    .custom-dashboard{
+      .custom-form{
+        h2{
+          font-weight: 600;
+        }
+        input{
+          border-style: none;
+        }
+        .btn{
+            background-color: $thirdColor;
+            color: white;
+        }      
+      }
+      table{
+        thead{
+          tr{
+            th{
+              a{
+                background-color: $primaryColor;
+                color: white;
+              }
+            }
+          }
+        }
+        tbody{
+          td{
+            .edit{
+              border-color: $primaryColor;
+              color: $primaryColor;
+            }
+            .hapus{
+              border-color: $redColor;
+              color: $redColor;
+            }
+          }
+        }
+      }
+    }
+  }

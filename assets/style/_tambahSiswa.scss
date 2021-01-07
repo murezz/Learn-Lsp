@@ -1,0 +1,22 @@
+#tambahSiswa{
+  .custom-tambahSiswa{
+    .in-card{
+      .in-body{
+        form{
+          .form-row{
+            .col-md-4{
+              input{
+                
+              }
+            }
+          }
+          .btn{
+            border-radius: 25px;
+            padding: 10px;
+            background-color: $thirdColor;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+
+
+  nav{
+    background-color: $thirdColor;
+    .brand{
+      .navbar-brand{
+        font-weight: 600;     
+      }
+      #navbarNavAltMarkup{
+        .navbar-nav{
+          .nav-item{
+            color: black;
+          }
+          .btn{
+            background-color:$redColor;
+            color: white;
+          }
+        }
+      }
+    }
+  }

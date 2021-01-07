@@ -34,11 +34,16 @@ if (isset($_POST['login'])) {
           <p>Website untuk memudahkan siswa melakukan pembayaran spp.</p>
           <form action="" method="post">
             <div class="form-group">
-              <input type="number" class="form-control col-10" id="nis" name="nis" placeholder="Masukkan NIS anda.">
+              <?php if (isset($error)) : ?>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  Maaf nis anda salah
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              <?php endif; ?>
+              <input type="number" class="form-control col-10 shadow" id="nis" name="nis" placeholder="Masukkan NIS anda.">
             </div>
-            <?php if (isset($error)) : ?>
-              <p class="font-italic" style="color: red;">maaf nis anda salah</p>
-            <?php endif; ?>
             <button type="submit" name="login" class="btn shadow btn-login col-3">Login</button>
             <a href="../petugas/login.php" class="btn shadow-sm btn-loginAdmin col-6">Masuk sebagai petugas</a>
           </form>

@@ -30,6 +30,10 @@ body {
   color: #002652;
 }
 
+#login .form-layout .form-custom form input {
+  border-style: none;
+}
+
 #login .form-layout .form-custom form .btn-login {
   background-color: #42adff;
   color: white;
@@ -72,5 +76,74 @@ body {
   color: #002652;
   margin-left: 20px;
   border-radius: 30px;
+}
+
+#dashboard-siswa .custom-dashboard .custom-form h2 {
+  font-weight: 600;
+}
+
+#dashboard-siswa .custom-dashboard .custom-form input {
+  border-style: none;
+}
+
+#dashboard-siswa .custom-dashboard .custom-form .btn {
+  background-color: #42fff3;
+  color: white;
+}
+
+#dashboard-siswa .custom-dashboard table tbody td .btn {
+  background-color: #42adff;
+  color: white;
+}
+
+nav {
+  background-color: #42fff3;
+}
+
+nav .brand .navbar-brand {
+  font-weight: 600;
+}
+
+nav .brand #navbarNavAltMarkup .navbar-nav .nav-item {
+  color: black;
+}
+
+nav .brand #navbarNavAltMarkup .navbar-nav .btn {
+  background-color: #e32309;
+  color: white;
+}
+
+#dashboard-admin .custom-dashboard .custom-form h2 {
+  font-weight: 600;
+}
+
+#dashboard-admin .custom-dashboard .custom-form input {
+  border-style: none;
+}
+
+#dashboard-admin .custom-dashboard .custom-form .btn {
+  background-color: #42fff3;
+  color: white;
+}
+
+#dashboard-admin .custom-dashboard table thead tr th a {
+  background-color: #42adff;
+  color: white;
+}
+
+#dashboard-admin .custom-dashboard table tbody td .edit {
+  border-color: #42adff;
+  color: #42adff;
+}
+
+#dashboard-admin .custom-dashboard table tbody td .hapus {
+  border-color: #e32309;
+  color: #e32309;
+}
+
+#tambahSiswa .custom-tambahSiswa .in-card .in-body form .btn {
+  border-radius: 25px;
+  padding: 10px;
+  background-color: #42fff3;
 }
 /*# sourceMappingURL=main.css.map */
