@@ -19,13 +19,16 @@ if (isset($_POST["submit"])) {
       </script>
     ";
   } else {
-    echo mysqli_error($conn);
-    // echo "
-    //   <script>
-    //   alert('Data Gagal di tambahkan');
-    //   document.location.href = 'login.php';
-    //   </script>
-    // ";
+    // echo mysqli_error($conn);
+    echo "
+      <script>
+      Swal.fire(
+        'Ini adalah judulnya',
+        'Ini adalah teksnya',
+        'success'
+      )
+      </script>
+    ";
   }
 }
 
@@ -60,7 +63,7 @@ if (isset($_POST["submit"])) {
             </div>
           </div>
           <div class="form-row">
-            <div class="col-md-4 mb-3">
+            <!-- <div class="col-md-4 mb-3">
               <label for="kelas">Kelas</label>
               <input type="text" class="form-control" id="kelas" name="nama_kelas" required>
               <div class="invalid-feedback">
@@ -79,7 +82,7 @@ if (isset($_POST["submit"])) {
               <div class="invalid-feedback">
                 Please select a valid state.
               </div>
-            </div>
+            </div> -->
             <div class="col-md-4 mb-3">
               <label for="alamat">Alamat</label>
               <input type="text" class="form-control" id="alamat" name="alamat" required>

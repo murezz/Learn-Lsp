@@ -14,6 +14,16 @@ $result = mysqli_query($conn, "SELECT * FROM (( siswa INNER JOIN kelas
                         ON siswa.id_kelas = kelas.id_kelas ) INNER JOIN spp
                         ON siswa.id_spp = spp.id_spp)");
 
+
+$nis = $_GET["nis"];
+
+if (hapus($nis) > 0) {
+  echo "<script type='text/javascript'>
+  alert('data berhasil di hapus')
+  </script>";
+}
+
+
 ?>
 
 <section id="dashboard-admin">
@@ -48,7 +58,7 @@ $result = mysqli_query($conn, "SELECT * FROM (( siswa INNER JOIN kelas
             <td><?= $row['nominal']; ?></td>
             <td>
               <a href="" class="btn edit">Edit</a> |
-              <a href="" class="btn hapus">Hapus</a>
+              <a href="admin.php?nis=<?= $row["nis"]; ?>" class="btn hapus">Hapus</a>
             </td>
           </tr>
           <?php $i++; ?>

@@ -16,6 +16,10 @@ $result = mysqli_query($conn, "SELECT * FROM (( siswa INNER JOIN kelas
 
 <section id="dashboard-siswa">
   <div class="container py-5 custom-dashboard">
+
+    <script>
+      Swal.fire('Ini adalah sweetalert Basic');
+    </script>
     <form class="form-inline my-2 my-lg-0 custom-form">
       <h2>Daftar Siswa</h2>
       <input class="form-control mr-sm-1 ml-auto col-4 shadow-sm" type="search" placeholder="Masukkan Nama Anda" aria-label="Search">

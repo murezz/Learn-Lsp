@@ -44,7 +44,7 @@ if (isset($_POST['login'])) {
             </div>
             <div class="col-6 custom-login">
               <form action="" method="post">
-                <h2 class="text-center">Login Admin</h2>
+                <h2 class="text-center">Login Petugas</h2>
                 <hr>
                 <div class="form-group username">
                   <label for="username">Username</label>
