@@ -11,15 +11,14 @@ function tambah($data)
   $nisn = $data["nisn"];
   $nis = $data["nis"];
   $nama = $data["nama"];
-  // $kelas = $data["nama_kelas"];
+  $kelas = $data["id_kelas"];
   // $jurusan = $data["kompetensi_keahlian"];
   $alamat = $data["alamat"];
   $no_telp = $data["no_telp"];
-  $tahun = $data["tahun"];
-  $nominal = $data["nominal"];
+  // $tahun = $data["tahun"];
+  $spp = $data["id_spp"];
 
-  $query = "INSERT INTO siswa (id, nisn, nis, nama, almat, no_telp) VALUES ('', '$nisn', '$nis', '$nama', '$alamat', '$no_telp') ";
-  $query .= "INSERT INTO spp (id_spp, tahun, nominal) VALUES ('', '$tahun', '$nominal') ";
+  $query = "INSERT INTO siswa VALUES ('$nisn', '$nis', '$nama', '$kelas', '$alamat', '$no_telp', '$spp') ";
 
   mysqli_query($conn, $query);
 

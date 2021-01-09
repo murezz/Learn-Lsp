@@ -18,5 +18,30 @@
         }
       }
     }
+    .layout-alert{
+      margin-top: -300px;
+      .alert-berhasil{
+        background-color: #fff;
+        border-color: $thirdColor;
+        h4{
+          margin-top: 15px;
+        }
+        a{
+          background-color: $primaryColor;
+          color: #fff;
+        }
+      }
+      .alert-gagal{
+        background-color: #fff;
+        border-color: $redColor;
+        h4{
+          margin-top: 15px;
+        }
+        a{
+          background-color: $primaryColor;
+          color: #fff;
+        }
+      }
+    }
   }
 }

@@ -11,8 +11,7 @@
   <!-- my css -->
   <link rel="stylesheet" href="../../assets/style/main.css">
 
-  <!-- sweet alert -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <title><?= $title; ?></title>
 </head>

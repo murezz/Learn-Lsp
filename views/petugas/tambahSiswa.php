@@ -12,23 +12,10 @@ require '../layouts/navbarAdmin.php';
 if (isset($_POST["submit"])) {
 
   if (tambah($_POST) > 0) {
-    echo "
-      <script>
-      alert('Data Berhasil di tambahkan');
-      document.location.href = 'dashboard.php';
-      </script>
-    ";
+    $succes = true;
   } else {
     // echo mysqli_error($conn);
-    echo "
-      <script>
-      Swal.fire(
-        'Ini adalah judulnya',
-        'Ini adalah teksnya',
-        'success'
-      )
-      </script>
-    ";
+    $gagal = true;
   }
 }
 
@@ -69,20 +56,19 @@ if (isset($_POST["submit"])) {
               <div class="invalid-feedback">
                 Please provide a valid city.
               </div>
-            </div>
+            </div> -->
             <div class="col-md-4 mb-3">
-              <label for="jurusan">Kompetensi Keahlian</label>
-              <select class="custom-select form-control" id="jurusan" name="kompetensi_keahlian" required>
+              <label for="jurusan">Kelas</label>
+              <select class="custom-select form-control" id="jurusan" name="id_kelas" required>
                 <option selected disabled value=""></option>
-                <option>Rekayasa Perangkat Lunak</option>
-                <option>Akuntansi</option>
-                <option>Perkantoran</option>
-                <option>Pemasaran</option>
+                <option>1 : ( 12 rpl )</option>
+                <option>2 : ( 11 rpl )</option>
+                <option>3 : ( 10 rpl )</option>
               </select>
               <div class="invalid-feedback">
                 Please select a valid state.
               </div>
-            </div> -->
+            </div>
             <div class="col-md-4 mb-3">
               <label for="alamat">Alamat</label>
               <input type="text" class="form-control" id="alamat" name="alamat" required>
@@ -99,30 +85,65 @@ if (isset($_POST["submit"])) {
                 Please provide a valid city.
               </div>
             </div>
-            <div class="col-md-4 mb-3">
+            <!-- <div class="col-md-4 mb-3">
               <label for="tahun">Tahun</label>
               <input type="number" class="form-control" id="tahun" name="tahun" required>
               <div class="invalid-feedback">
                 Please select a valid state.
               </div>
-            </div>
+            </div> -->
             <div class="col-md-4 mb-3">
               <label for="nominal">Nominal</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="inputGroupPrepend">Rp</span>
                 </div>
-                <input type="text" class="form-control" id="nominal" name="nominal" required>
+                <select class="custom-select form-control" id="jurusan" name="id_spp" required>
+                  <option selected disabled value=""></option>
+                  <option>1 : ( 200 )</option>
+                  <option>2 : ( 300 )</option>
+                  <option>3 : ( 400 )</option>
+                  <option>4 : ( 500 )</option>
+                </select>
                 <div class="invalid-feedback">
                   Please provide a valid zip.
                 </div>
               </div>
             </div>
           </div>
-          <button class="btn col-2 shadow" type="submit" name="submit">Tambah</button>
+          <div class="d-flex justify-content-end">
+            <button class="btn col-2" type="submit" name="submit">Tambah</button>
+          </div>
         </form>
       </div>
     </div>
+
+    <!-- Jika data berhasil atau gagal di tambah -->
+    <div class="layout-alert d-flex justify-content-center">
+      <?php if (isset($succes)) : ?>
+        <div class="alert alert-berhasil col-4" role="alert">
+          <div class="image d-flex justify-content-center" data-aos="zoom-in" data-aos-duration="1000">
+            <img src="../../assets/img/succes.svg" width="200px" alt="">
+          </div>
+          <h4>Data Behasil di tambah!</h4>
+          <hr>
+          <a href="admin.php" class="alert-link btn">Ok!</a>
+        </div>
+      <?php endif; ?>
+
+      <?php if (isset($gagal)) : ?>
+        <div class="alert alert-gagal col-4" role="alert">
+          <div class="image d-flex justify-content-center" data-aos="zoom-in">
+            <img src="../../assets/img/failed.svg" width="200px" alt="">
+          </div>
+          <h4>Data Gagal di tambahkan!</h4>
+          <hr>
+          <a href="tambahSiswa.php" class="alert-link btn">Ok!</a>
+        </div>
+      <?php endif; ?>
+    </div>
+    <!-- Penutup -->
+
   </div>
 </section>
 

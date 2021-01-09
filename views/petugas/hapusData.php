@@ -5,9 +5,9 @@ require '../../public/app.php';
 $nis = $_GET["nis"];
 
 if (hapus($nis) > 0) {
-  echo "<script type='text/javascript'>
-  alert('data berhasil di hapus')
+  echo "<script>
+  alert('Data Berhasil Di Hapus!');
+  location.href='admin.php';
+  window
   </script>";
-} else {
-  echo 'gagal';
 }

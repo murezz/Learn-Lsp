@@ -146,4 +146,36 @@ nav .brand #navbarNavAltMarkup .navbar-nav .btn {
   padding: 10px;
   background-color: #42fff3;
 }
+
+#tambahSiswa .custom-tambahSiswa .layout-alert {
+  margin-top: -300px;
+}
+
+#tambahSiswa .custom-tambahSiswa .layout-alert .alert-berhasil {
+  background-color: #fff;
+  border-color: #42fff3;
+}
+
+#tambahSiswa .custom-tambahSiswa .layout-alert .alert-berhasil h4 {
+  margin-top: 15px;
+}
+
+#tambahSiswa .custom-tambahSiswa .layout-alert .alert-berhasil a {
+  background-color: #42adff;
+  color: #fff;
+}
+
+#tambahSiswa .custom-tambahSiswa .layout-alert .alert-gagal {
+  background-color: #fff;
+  border-color: #e32309;
+}
+
+#tambahSiswa .custom-tambahSiswa .layout-alert .alert-gagal h4 {
+  margin-top: 15px;
+}
+
+#tambahSiswa .custom-tambahSiswa .layout-alert .alert-gagal a {
+  background-color: #42adff;
+  color: #fff;
+}
 /*# sourceMappingURL=main.css.map */
