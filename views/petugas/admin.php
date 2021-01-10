@@ -44,14 +44,14 @@ $result = mysqli_query($conn, "SELECT * FROM (( siswa INNER JOIN kelas
         <?php $i = 1; ?>
         <?php while ($row = mysqli_fetch_assoc($result)) : ?>
           <tr class="text-center">
-            <th scope="row"><?= $i; ?></th>
+            <th scope="row"><?= $i; ?>.</th>
             <td><?= $row['nis']; ?></td>
             <td><?= $row['nama']; ?></td>
             <td><?= $row['nama_kelas']; ?></td>
             <td><?= $row['nominal']; ?></td>
             <td>
-              <a href="" class="btn edit">Edit</a> |
-              <a href="hapusdata.php?nis=<?= $row["nis"]; ?>" class="btn hapus">Hapus</a>
+              <a href="editSiswa.php?nis=<?= $row["nis"]; ?>" class="btn edit">Edit</a> |
+              <a href="hapusSiswa.php?nis=<?= $row["nis"]; ?>" class="btn hapus">Hapus</a>
             </td>
           </tr>
           <?php $i++; ?>

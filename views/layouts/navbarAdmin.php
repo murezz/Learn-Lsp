@@ -6,8 +6,8 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link" href="#">Daftar Siswa</span></a>
-        <a class="nav-item nav-link" href="#">Daftar Petugas</a>
+        <a class="nav-item nav-link" href="admin.php">Daftar Siswa</span></a>
+        <a class="nav-item nav-link" href="daftarPetugas.php">Daftar Petugas</a>
         <a class="nav-item nav-link" href="#">info pembayaran</a>
         <a class="btn ml-3" href="#">Logout</a>
       </div>

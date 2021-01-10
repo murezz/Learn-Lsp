@@ -4,7 +4,7 @@ require '../../public/app.php';
 
 $nis = $_GET["nis"];
 
-if (hapus($nis) > 0) {
+if (hapusSiswa($nis) > 0) {
   echo "<script>
   alert('Data Berhasil Di Hapus!');
   location.href='admin.php';

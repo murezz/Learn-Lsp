@@ -141,10 +141,11 @@ nav .brand #navbarNavAltMarkup .navbar-nav .btn {
   color: #e32309;
 }
 
-#tambahSiswa .custom-tambahSiswa .in-card .in-body form .btn {
+#tambahSiswa .custom-tambahSiswa .in-card .in-body form .layout-btn .btn {
   border-radius: 25px;
   padding: 10px;
   background-color: #42fff3;
+  color: #fff;
 }
 
 #tambahSiswa .custom-tambahSiswa .layout-alert {
