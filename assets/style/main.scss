@@ -124,7 +124,18 @@ body{
   }
 }
 
-
+#petugas{
+  .custom-petugas{
+    .custom-alert{
+      background-color: $thirdColor;
+      color: white;
+      .btn{
+        border-color: $primaryColor;
+        color: $primaryColor;
+      }
+    }
+  }
+}
 
 // css navbar admin
 @import'navbarAdmin';

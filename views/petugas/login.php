@@ -22,7 +22,7 @@ if (isset($_POST['login'])) {
     // cek level
     $row = mysqli_fetch_assoc($result);
     if ($_SESSION["level"] = $row["level"] == 'admin') {
-      header("Location:admin.php");
+      header("Location:../admin/admin.php");
     } else if ($_SESSION["level"] = $row["level"] == 'petugas') {
       header("Location:petugas.php");
     }

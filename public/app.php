@@ -79,6 +79,7 @@ function editPetugas($data)
 
   global $conn;
 
+  $id = $data["id_petugas"];
   $username = htmlspecialchars($data["username"]);
   $password = htmlspecialchars($data["password"]);
   $nama = htmlspecialchars($data["nama_pertugas"]);
@@ -88,9 +89,12 @@ function editPetugas($data)
   $query = "UPDATE petugas SET
             username = '$username',
             password = '$password',
-            nama_petugas = '$nama',
+            nama_pertugas = '$nama',
             level = '$level'
+            WHERE id_petugas = '$id'
             ";
+
+  mysqli_query($conn, $query);
 
   return mysqli_affected_rows($conn);
 }

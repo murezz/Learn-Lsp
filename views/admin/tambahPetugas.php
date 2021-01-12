@@ -14,19 +14,34 @@ require '../layouts/navbarAdmin.php';
 if (isset($_POST["submit"])) {
 
   if (tambahPetugas($_POST) > 0) {
-    echo 'sukses';
+    $succes = true;
   } else {
-    echo mysqli_error($conn);
+    $error = true;
   }
 }
 
 ?>
 
 
-<section>
-  <div class="container mt-5">
-    <div class="card shadow">
-      <div class="card-body">
+<section id="petugas">
+  <div class="container mt-5 custom-petugas">
+    <!-- Jika data berhasil atau gagal di tambah -->
+    <?php if (isset($succes)) : ?>
+      <div class="alert text-center" style="background-color: #42fff3; color:#fff;" role="alert">
+        <h3>Data Berhasil Ditambahkan!</h3>
+        <a href="daftarPetugas.php" class="alert-link btn" style="border-color: #002652; color: #002652;">Lihat Daftar Petugas</a>
+      </div>
+    <?php endif; ?>
+
+    <?php if (isset($gagal)) : ?>
+      <div class="alert alert-danger text-center" style="color:#fff;" role="alert">
+        <h3>Data Berhasil Ditambahkan!</h3>
+        <a href="daftarPetugas.php" class="alert-link btn" style="border-color: #42adff; color: #42adff;">Lihat Daftar Petugas</a>
+      </div>
+    <?php endif; ?>
+    <!-- Penutup -->
+    <div class="card shadow ">
+      <div class="card-body ">
         <div class="row">
           <div class="col-md-6">
             <img src="../../assets/img/bg-tambahPetugas.svg" width="500px" alt="">

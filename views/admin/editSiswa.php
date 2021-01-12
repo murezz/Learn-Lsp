@@ -91,7 +91,7 @@ if (isset($_POST["submit"])) {
           </div>
           <h4>Data Behasil di ubah!</h4>
           <hr>
-          <a href="daftarSiswa.php" class="alert-link btn">Ok!</a>
+          <a href="admin.php" class="alert-link btn">Ok!</a>
         </div>
       <?php endif; ?>
 
@@ -103,7 +103,7 @@ if (isset($_POST["submit"])) {
           <h4>Data Gagal di ubah!</h4>
           <p>*Maaf NIS tidak bisa di ubah</p>
           <hr>
-          <a href="editSiswa.php" class="alert-link btn">Ok!</a>
+          <a href="admin.php" class="alert-link btn">Ok!</a>
         </div>
       <?php endif; ?>
     </div>
