@@ -10,4 +10,6 @@ if (hapusSiswa($nis) > 0) {
   location.href='admin.php';
   window
   </script>";
+} else {
+  echo mysqli_error($conn);
 }

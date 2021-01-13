@@ -6,7 +6,7 @@ require '../../public/app.php';
 
 require '../layouts/header.php';
 
-require '../layouts/navbarAdmin.php';
+require '../layouts/navbarPetugas.php';
 
 
 
@@ -51,7 +51,7 @@ $result = mysqli_query($conn, "SELECT * FROM (( siswa INNER JOIN kelas
             <td><?= $row['nominal']; ?></td>
             <td>
               <a href="editSiswa.php?nis=<?= $row["nis"]; ?>" class="btn edit">Edit</a> |
-              <a href="hapusSiswa.php?nis=<?= $row["nis"]; ?>" class="btn hapus">Hapus</a>
+              <a href="hapusSiswa.php?nisn=<?= $row["nisn"]; ?>" class="btn hapus">Hapus</a>
             </td>
           </tr>
           <?php $i++; ?>

@@ -57,7 +57,35 @@ function editSiswa($data)
 }
 
 
+function Pembayaran($data)
+{
 
+  global $conn;
+
+  $id_petugas = htmlspecialchars($data["id_petugas"]);
+  $nisn = htmlspecialchars($data["nisn"]);
+  $tgl = htmlspecialchars($data["tgl_bayar"]);
+  $bulan = htmlspecialchars($data["bulan_dibayar"]);
+  $tahun = htmlspecialchars($data["tahun_dibayar"]);
+  $id_spp = htmlspecialchars($data["id_spp"]);
+  $jumlah = htmlspecialchars($data["jumlah_bayar"]);
+
+  mysqli_query($conn, "INSERT INTO pembayaran values ('', '$id_petugas', '$nisn', '$tgl', '$bulan', '$tahun', '$id_spp', '$jumlah') ");
+
+  return mysqli_affected_rows($conn);
+}
+
+
+function cari($keyword)
+{
+
+
+  $query = "SELECT * FROM siswa WHERE nama LIKE '%$keyword%'";
+
+  return mysqli_fetch_assoc($query);
+}
+
+// CRUD Petugas
 function tambahPetugas($data)
 {
 

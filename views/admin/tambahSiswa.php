@@ -14,7 +14,7 @@ if (isset($_POST["submit"])) {
   if (tambahSiswa($_POST) > 0) {
     $succes = true;
   } else {
-    $gagal = true;
+    echo mysqli_error($conn);
   }
 }
 

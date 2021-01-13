@@ -6,11 +6,17 @@ require '../../public/app.php';
 
 require '../layouts/header.php';
 
+require '../layouts/navbarSiswa.php';
+
 
 // logic backend
 $result = mysqli_query($conn, "SELECT * FROM (( siswa INNER JOIN kelas 
                         ON siswa.id_kelas = kelas.id_kelas ) INNER JOIN spp
-                        ON siswa.id_spp = spp.id_spp)");
+                        ON siswa.id_spp = spp.id_spp) ORDER BY nisn ASC");
+
+if (isset($_POST['cari'])) {
+  $result = cari($_POST['keyword']);
+}
 
 ?>
 
@@ -18,8 +24,8 @@ $result = mysqli_query($conn, "SELECT * FROM (( siswa INNER JOIN kelas
   <div class="container py-5 custom-dashboard">
     <form class="form-inline my-2 my-lg-0 custom-form">
       <h2>Daftar Siswa</h2>
-      <input class="form-control mr-sm-1 ml-auto col-4 shadow-sm" type="search" placeholder="Masukkan Nama Anda" aria-label="Search">
-      <button class="btn my-2 my-sm-0 shadow-sm" type="submit">Cari</button>
+      <input class="form-control mr-sm-1 ml-auto col-4 shadow-sm" type="search" name="keyword" placeholder="Masukkan Nama Anda" aria-label="Search">
+      <button class="btn my-2 my-sm-0 shadow-sm" type="submit" name="cari">Cari</button>
     </form>
     <hr>
     <table class="table table-bordered shadow-sm">
