@@ -22,7 +22,6 @@ if (isset($_POST['submit'])) {
 
 ?>
 
-
 <section>
   <div class="container py-5 mt-5 d-flex justify-content-center">
     <div class="row">
