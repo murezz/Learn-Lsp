@@ -1,5 +1,6 @@
 <?php
 
+
 $title = 'Daftar Petugas';
 
 require '../layouts/header.php';

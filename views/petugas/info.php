@@ -1,12 +1,13 @@
 <?php
 
+
 $title = 'Data pembayaran Siswa';
 
 require '../../public/app.php';
 
 require '../layouts/header.php';
 
-require '../layouts/navbarSiswa.php';
+require '../layouts/navbarPetugas.php';
 
 // logic backend
 $pembayaran = mysqli_query($conn, "SELECT * FROM pembayaran INNER JOIN petugas ON pembayaran.id_petugas = petugas.id_petugas");
@@ -25,8 +26,8 @@ $pembayaran = mysqli_query($conn, "SELECT * FROM pembayaran INNER JOIN petugas O
       <thead>
         <tr class="text-center">
           <th scope="col">No.</th>
-          <th scope="col">Nama Petugas</th>
           <th scope="col">Nisn</th>
+          <th scope="col">Nama siswa</th>
           <th scope="col">Tanggal</th>
           <th scope="col">Bulan</th>
           <th scope="col">SPP</th>

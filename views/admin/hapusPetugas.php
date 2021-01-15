@@ -1,5 +1,7 @@
 <?php
 
+
+
 require '../../public/app.php';
 
 $id = $_GET["id_petugas"];

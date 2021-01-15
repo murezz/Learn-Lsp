@@ -1,5 +1,6 @@
 <?php
 
+
 $title = 'Login';
 
 require '../../public/app.php';
@@ -9,7 +10,9 @@ require '../layouts/header.php';
 
 // logic backend
 
-if (isset($_POST['login'])) {
+
+if (isset($_POST['submit'])) {
+
 
   $nis = $_POST['nis'];
 
@@ -44,7 +47,7 @@ if (isset($_POST['login'])) {
               <?php endif; ?>
               <input type="number" class="form-control col-10 shadow" id="nis" name="nis" placeholder="Masukkan NIS anda.">
             </div>
-            <button type="submit" name="login" class="btn shadow btn-login col-3">Login</button>
+            <button type="submit" name="submit" class="btn shadow btn-login col-3">Login</button>
             <a href="../petugas/login.php" class="btn shadow-sm btn-loginAdmin col-6">Masuk sebagai petugas</a>
           </form>
         </div>

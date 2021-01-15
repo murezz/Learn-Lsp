@@ -1,5 +1,7 @@
 <?php
 
+
+
 $title = 'Tambah Data Siswa';
 
 require '../../public/app.php';

@@ -1,5 +1,6 @@
 <?php
 
+
 $title = 'Pembayaran';
 
 require '../../public/app.php';
@@ -23,33 +24,32 @@ if (isset($_POST['submit'])) {
 
 
 <section>
-  <div class="container py-4 d-flex justify-content-center">
-    <div class="card">
-      <div class="card-body">
+  <div class="container py-5 mt-5 d-flex justify-content-center">
+    <div class="row">
+      <div class="col-6">
+        <img src="../../assets/img/bayar.svg" class="mt-5 py-5" width="350px" alt="">
+      </div>
+      <div class="col-6">
+        <div class="card shadow">
+          <div class="card-body">
 
-        <?php if (isset($sukses)) : ?>
-          <div class="alert alert-success text-center" data-aos="zoom-in" role="alert">
-            Transaksi sukses, <a href="pembayaran.php" class="alert-link">Lihat daftar pembayaran?</a>
-          </div>
-        <?php endif; ?>
+            <?php if (isset($sukses)) : ?>
+              <div class="alert alert-success text-center" data-aos="zoom-in" role="alert">
+                Transaksi sukses, <br><a href="pembayaran.php" class="alert-link">Lihat daftar pembayaran?</a>
+              </div>
+            <?php endif; ?>
 
-        <?php if (isset($error)) : ?>
-          <div class="alert alert-warning text-center" data-aos="zoom-in" role="alert">
-            Anda sudah membayar spp bulan ini
-          </div>
-        <?php endif; ?>
+            <?php if (isset($error)) : ?>
+              <div class="alert alert-warning text-center" data-aos="zoom-in" role="alert">
+                Anda sudah membayar spp
+              </div>
+            <?php endif; ?>
 
-        <div class="row">
-          <div class="col-6">
-            <img src="../../assets/img/bayar.svg" class="mt-5" width="350px" alt="">
-          </div>
-          <div class="col-6">
             <form action="" method="post">
               <?php while ($row = mysqli_fetch_assoc($bayar)) : ?>
                 <div class="form-group">
                   <select type="text" class="form-control" name="id_petugas">
                     <option selected disabled>Pilih Petugas</option>
-                    <option value="3">Petugas</option>
                     <option value="5">Firman Aulia</option>
                     <option value="6">Rizqi Akbar Rabbani</option>
                     <option value="8">Hanny utami</option>
@@ -71,7 +71,10 @@ if (isset($_POST['submit'])) {
                   <input type="hidden" class="form-control" name="id_spp" value="<?= $row['id_spp']; ?>">
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="jumlah_bayar" value="<?= $row['nominal']; ?>">
+                  <input type="text" class="form-control" value="<?= $row['nominal']; ?>">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="jumlah_bayar" placeholder="Jumlah Bayar">
                 </div>
               <?php endwhile; ?>
               <button class="btn btn-primary" type="submit" name="submit">Bayar</button>

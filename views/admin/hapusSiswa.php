@@ -1,10 +1,11 @@
 <?php
 
+
 require '../../public/app.php';
 
-$nis = $_GET["nis"];
+$nisn = $_GET["nisn"];
 
-if (hapusSiswa($nis) > 0) {
+if (hapusSiswa($nisn) > 0) {
   echo "<script>
   alert('Data Berhasil Di Hapus!');
   location.href='admin.php';

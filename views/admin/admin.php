@@ -1,5 +1,6 @@
 <?php
 
+
 $title = 'Admin | Dashboard';
 
 require '../../public/app.php';
@@ -10,11 +11,10 @@ require '../layouts/navbarAdmin.php';
 
 
 
-
 // logic backend
 $result = mysqli_query($conn, "SELECT * FROM (( siswa INNER JOIN kelas 
                         ON siswa.id_kelas = kelas.id_kelas ) INNER JOIN spp
-                        ON siswa.id_spp = spp.id_spp)");
+                        ON siswa.id_spp = spp.id_spp) ORDER BY nama ASC ");
 
 
 ?>
@@ -51,7 +51,7 @@ $result = mysqli_query($conn, "SELECT * FROM (( siswa INNER JOIN kelas
             <td><?= $row['nominal']; ?></td>
             <td>
               <a href="editSiswa.php?nis=<?= $row["nis"]; ?>" class="btn edit">Edit</a> |
-              <a href="hapusSiswa.php?nis=<?= $row["nis"]; ?>" class="btn hapus">Hapus</a>
+              <a href="hapusSiswa.php?nisn=<?= $row["nisn"]; ?>" class="btn hapus">Hapus</a>
             </td>
           </tr>
           <?php $i++; ?>

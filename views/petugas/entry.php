@@ -1,6 +1,5 @@
 <?php
 
-
 $title = 'Entry Pembayaran';
 
 require '../../public/app.php';
@@ -43,7 +42,7 @@ $entry = mysqli_query($conn, "SELECT * FROM pembayaran INNER JOIN petugas ON pem
             <span>Jumlah di bayar : Rp. <?= $row['jumlah_bayar']; ?>.000</span>
           </div>
           <div class="p-3">
-            <a href="pembayaran.php" class="btn btn-outline-primary col-12">Kembali</a>
+            <a href="info.php" class="btn btn-outline-primary col-12">Kembali</a>
           </div>
         </div>
       <?php endwhile; ?>

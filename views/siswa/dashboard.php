@@ -1,5 +1,6 @@
 <?php
 
+
 $title = 'Home | Siswa';
 
 require '../../public/app.php';
@@ -12,7 +13,7 @@ require '../layouts/navbarSiswa.php';
 // logic backend
 $result = mysqli_query($conn, "SELECT * FROM (( siswa INNER JOIN kelas 
                         ON siswa.id_kelas = kelas.id_kelas ) INNER JOIN spp
-                        ON siswa.id_spp = spp.id_spp) ORDER BY nisn ASC");
+                        ON siswa.id_spp = spp.id_spp) ORDER BY nama ASC");
 
 if (isset($_POST['cari'])) {
   $result = cari($_POST['keyword']);

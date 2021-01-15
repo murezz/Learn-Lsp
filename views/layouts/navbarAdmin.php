@@ -8,8 +8,8 @@
       <div class="navbar-nav">
         <a class="nav-item nav-link" href="admin.php">Daftar Siswa</span></a>
         <a class="nav-item nav-link" href="daftarPetugas.php">Daftar Petugas</a>
-        <a class="nav-item nav-link" href="#">info pembayaran</a>
-        <a class="btn ml-3" href="#">Logout</a>
+        <a class="nav-item nav-link" href="info.php">info pembayaran</a>
+        <a class="btn ml-3" href="../petugas/login.php">Logout</a>
       </div>
     </div>
   </div>

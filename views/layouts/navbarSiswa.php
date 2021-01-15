@@ -8,7 +8,7 @@
       <div class="navbar-nav">
         <a class="nav-item nav-link" href="dashboard.php">Daftar Siswa</span></a>
         <a class="nav-item nav-link" href="pembayaran.php">Info pembayaran</a>
-        <a class="btn ml-3" href="#">Logout</a>
+        <a class="btn ml-3" href="../siswa/login.php">Logout</a>
       </div>
     </div>
   </div>

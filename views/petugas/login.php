@@ -1,5 +1,7 @@
 <?php
 
+
+
 $title = 'Login | Admin';
 
 require '../../public/app.php';

@@ -23,10 +23,10 @@ function tambahSiswa($data)
   return mysqli_affected_rows($conn);
 }
 
-function hapusSiswa($nis)
+function hapusSiswa($nisn)
 {
   global $conn;
-  mysqli_query($conn, "DELETE FROM siswa WHERE nis = $nis");
+  mysqli_query($conn, "DELETE FROM siswa WHERE nisn = $nisn");
 
   return mysqli_affected_rows($conn);
 }
@@ -131,6 +131,14 @@ function hapusPetugas($id)
 {
   global $conn;
   mysqli_query($conn, "DELETE FROM petugas WHERE id_petugas = $id");
+
+  return mysqli_affected_rows($conn);
+}
+
+function hapusInfo($id)
+{
+  global $conn;
+  mysqli_query($conn, "DELETE FROM pembayaran WHERE id_pembayaran = $id");
 
   return mysqli_affected_rows($conn);
 }
